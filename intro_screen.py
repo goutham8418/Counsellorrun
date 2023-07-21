@@ -8,8 +8,7 @@ HEIGHT = 350
 def draw():
     screen.clear()
     screen.fill(('White'))
-    screen.draw.text("Counsellor Run",(140,50),color='black',fontsize=64)
-
+    screen.blit('titletext',(78, 5))
 
 pgzrun.go()
 
