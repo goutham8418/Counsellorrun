@@ -10,6 +10,10 @@ def draw():
     screen.fill(('White'))
     screen.blit('titletext',(78, 5))
 
+def on_key_escape():
+        screen.clear()
+
+
 pgzrun.go()
 
 
