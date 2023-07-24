@@ -4,15 +4,22 @@ import pgzrun
 
 WIDTH = 600
 HEIGHT = 350
+STATE = 0
+
+startbutton = Actor('startbutton', (310, 175))
 
 def draw():
-    screen.clear()
-    screen.fill(('White'))
-    #screen.blit('titletext',(78, 5))
-    screen.blit('startbutton',(200, 200))
+    if (STATE==0):
+        screen.clear()
+        screen.fill(('White'))
+        startbutton.draw()
+        screen.blit('titletext',(78, 5))
+   
 
-#def on_key_escape():
-        #screen.clear()
+def on_mouse_down(pos, button):
+    if button == mouse.LEFT and startbutton.collidepoint(pos):
+        STATE=1
+        print(STATE)
 
 
 pgzrun.go()
