@@ -9,6 +9,7 @@ def draw():
     screen.clear()
     screen.fill(('White'))
     screen.blit('titletext',(78, 5))
+    screen.blit('startbutton',(74, 5))
 
 def on_key_escape():
         screen.clear()
