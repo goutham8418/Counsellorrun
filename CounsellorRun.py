@@ -75,7 +75,7 @@ def on_mouse_down(pos, button):
         
     if button == mouse.LEFT and mark.collidepoint(pos):
         MC=mark
-        STATE=2
+        STATE=1
         print(STATE)
         
     if button == mouse.LEFT and callum.collidepoint(pos):
