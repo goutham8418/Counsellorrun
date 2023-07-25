@@ -18,6 +18,7 @@ emilie = Actor("pixilart-drawing 3.png")
 harrison = Actor("harrison.png")
 mark = Actor("mark.png")
 callum = Actor("callum.png")
+jack = Actor("jack.png")
 
 #Draw the game screen depending on the state
 def draw():
@@ -51,6 +52,9 @@ def draw():
     
         callum.pos = (420, 115)
         callum.draw()
+
+        jack.pos = (420, 300)
+        jack.draw()
    
 #Register clicks on the start button
 def on_mouse_down(pos, button):
@@ -80,6 +84,10 @@ def on_mouse_down(pos, button):
         
     if button == mouse.LEFT and callum.collidepoint(pos):
         MC=callum
+        STATE=1
+        print(STATE)
+    if button == mouse.left and jack.collidepoint(pos):
+        MC=jack
         STATE=1
         print(STATE)
 
