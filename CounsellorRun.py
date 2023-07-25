@@ -6,7 +6,7 @@ import pgzrun
 #Define variables and screen size
 WIDTH = 600
 HEIGHT = 350
-TITLE = "Main Menu"
+TITLE = "Counsellor Run"
 STATE = 0
 MC = None
 
