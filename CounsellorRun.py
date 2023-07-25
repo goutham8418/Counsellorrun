@@ -36,7 +36,7 @@ def draw():
         screen.draw.filled_rect(Rect(WIDTH / 2 - 180, HEIGHT / 2 + 80, 100, 80), "grey")
         screen.draw.filled_rect(Rect(WIDTH / 2 + 70, HEIGHT / 2 - 100, 100, 80), "grey")
         screen.draw.filled_rect(Rect(WIDTH / 2 + 70, HEIGHT / 2 - 15, 100, 90), "grey")
-        screen.draw.filled_rect(Rect(WIDTH / 2 + 70, HEIGHT / 2 + 80, 100, 80), "grey")
+        screen.draw.filled_rect(Rect(WIDTH / 2 + 70, HEIGHT / 2 + 85, 100, 80), "grey")
 
         joe.pos = (160, 119)
         joe.draw()
@@ -86,7 +86,7 @@ def on_mouse_down(pos, button):
         MC=callum
         STATE=1
         print(STATE)
-    if button == mouse.left and jack.collidepoint(pos):
+    if button == mouse.LEFT and jack.collidepoint(pos):
         MC=jack
         STATE=1
         print(STATE)
