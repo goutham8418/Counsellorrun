@@ -12,7 +12,7 @@ def draw():
     screen.draw.filled_rect(Rect(WIDTH / 2 - 180, HEIGHT / 2 - 90, 100, 80), "grey")
     screen.draw.filled_rect(Rect(WIDTH / 2 - 180, HEIGHT / 2 - 5, 100, 80), "grey")
     screen.draw.filled_rect(Rect(WIDTH / 2 - 180, HEIGHT / 2 + 80, 100, 80), "grey")
-    screen.draw.filled_rect(Rect(WIDTH / 2 + 70, HEIGHT / 2 - 95, 100, 70), "grey")
+    screen.draw.filled_rect(Rect(WIDTH / 2 + 70, HEIGHT / 2 - 100, 100, 80), "grey")
     screen.draw.filled_rect(Rect(WIDTH / 2 + 70, HEIGHT / 2 - 15, 100, 90), "grey")
     screen.draw.filled_rect(Rect(WIDTH / 2 + 70, HEIGHT / 2 + 80, 100, 80), "grey")
 
@@ -22,14 +22,48 @@ def draw():
     
     emilie = Actor("pixilart-drawing 3.png")
     emilie.pos = (420, 200)
-    emilie.height = 20
     emilie.draw()
     
+    harrison = Actor("harrison.png")
+    harrison.pos = (165, 210)
+    harrison.draw()
+    
+    mark = Actor("mark.png")
+    mark.pos = (165, 295)
+    mark.draw()
+    
+    callum = Actor("callum.png")
+    callum.pos = (420, 115)
+    callum.draw()
+    
+    """
     screen.draw.text("JOE", center = (WIDTH / 2 - 140, HEIGHT / 2 - 50), fontsize = 40, color = "white")
     screen.draw.text("ANITA", center = (WIDTH / 2 - 130, HEIGHT / 2 + 30), fontsize = 40, color = "white")
     screen.draw.text("HARRISON", center = (WIDTH / 2 - 130, HEIGHT / 2 +120), fontsize = 25, color = "white")
     screen.draw.text("MARK", center = (WIDTH / 2 + 120, HEIGHT / 2 - 50), fontsize = 40, color = "white")
     screen.draw.text("EMILIE", center = (WIDTH / 2 + 120, HEIGHT / 2 + 30), fontsize = 40, color = "white")
-
+"""
+    
+def on_mouse_down(pos,button):
+    global MC,STATE
+    if button == mouse.LEFT and joe.collidepoint(pos):
+        MC=joe
+        STATE=1
+        
+    if button == mouse.LEFT and emilie.collidepoint(pos):
+        MC=emilie
+        STATE=1
+    
+    if button == mouse.LEFT and harrison.collidepoint(pos):
+        MC=harrison
+        STATE=1
+        
+    if button == mouse.LEFT and mark.collidepoint(pos):
+        MC=mark
+        STATE=1
+        
+    if button == mouse.LEFT and callum.collidepoint(pos):
+        MC=callum
+        STATE=1
 
 pgzrun.go()
