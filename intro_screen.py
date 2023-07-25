@@ -6,6 +6,8 @@ WIDTH = 600
 HEIGHT = 350
 STATE = 0
 
+print(STATE)
+
 startbutton = Actor('startbutton', (310, 175))
 
 def draw():
