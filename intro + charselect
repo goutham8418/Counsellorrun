@@ -1,4 +1,4 @@
-#Import librarys
+#Import libraries
 import sys
 import pgzero
 import pgzrun
@@ -17,8 +17,11 @@ joe = Actor("pixilart-drawing.png")
 emilie = Actor("pixilart-drawing 3.png")
 harrison = Actor("harrison.png")
 mark = Actor("mark.png")
-callum = Actor("callum.png")
+callum = Actor("callum2.png")
 jack = Actor("jack.png")
+adam = Actor("adam.png")
+anita = Actor("anita.png")
+clara = Actor("clara.png")
 
 #Draw the game screen depending on the state
 def draw():
@@ -36,10 +39,10 @@ def draw():
         screen.draw.filled_rect(Rect(WIDTH / 2 - 180, HEIGHT / 2 + 80, 100, 80), "grey")
         screen.draw.filled_rect(Rect(WIDTH / 2 + 70, HEIGHT / 2 - 100, 100, 80), "grey")
         screen.draw.filled_rect(Rect(WIDTH / 2 + 70, HEIGHT / 2 - 15, 100, 90), "grey")
-        screen.draw.filled_rect(Rect(WIDTH / 2 + 70, HEIGHT / 2 + 80, 100, 90), "grey")
+        screen.draw.filled_rect(Rect(WIDTH / 2 + 70, HEIGHT / 2 + 80, 100, 85), "grey")
         screen.draw.filled_rect(Rect(WIDTH / 2 - 55, HEIGHT / 2 - 95, 100, 80), "grey")
-        screen.draw.filled_rect(Rect(WIDTH / 2 - 55, HEIGHT / 2 - 5, 100, 80), "grey")
-        screen.draw.filled_rect(Rect(WIDTH / 2 - 55, HEIGHT / 2 + 85, 100, 80), "grey")
+        screen.draw.filled_rect(Rect(WIDTH / 2 - 55, HEIGHT / 2 - 7, 100, 80), "grey")
+        screen.draw.filled_rect(Rect(WIDTH / 2 - 55, HEIGHT / 2 + 82, 100, 80), "grey")
 
         joe.pos = (160, 119)
         joe.draw()
@@ -58,6 +61,16 @@ def draw():
         
         jack.pos = (420, 300)
         jack.draw()
+        
+        adam.pos = (290, 120)
+        adam.draw()
+        
+        anita.pos = (290, 210)
+        anita.draw()
+        
+        clara.pos = (290, 297)
+        clara.draw()
+          
    
 #Register clicks on the start button
 def on_mouse_down(pos, button):
@@ -82,11 +95,16 @@ def on_mouse_down(pos, button):
         
     if button == mouse.LEFT and mark.collidepoint(pos):
         MC=mark
-        STATE=2
+        STATE=1
         print(STATE)
         
     if button == mouse.LEFT and callum.collidepoint(pos):
         MC=callum
+        STATE=1
+        print(STATE)
+        
+    if button == mouse.LEFT and adam.collidepoint(pos):
+        MC=adam
         STATE=1
         print(STATE)
 
