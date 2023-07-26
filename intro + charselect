@@ -13,15 +13,19 @@ MC = None
 print(STATE)
 
 startbutton = Actor('startbutton', (310, 175))
-joe = Actor("pixilart-drawing.png")
-emilie = Actor("pixilart-drawing 3.png")
-harrison = Actor("harrison.png")
-mark = Actor("mark.png")
-callum = Actor("callum2.png")
-jack = Actor("jack.png")
-adam = Actor("adam.png")
-anita = Actor("anita.png")
-clara = Actor("clara.png")
+joe1 = Actor("pixilart-drawing.png")
+emilie1 = Actor("pixilart-drawing 3.png")
+harrison1 = Actor("harrison.png")
+mark1 = Actor("mark.png")
+callum1 = Actor("callum2.png")
+jack1 = Actor("jack.png")
+adam1 = Actor("adam.png")
+anita1 = Actor("anita.png")
+clara1 = Actor("clara.png")
+rachel1 = Actor("rachel.png")
+emma1 = Actor("emma.png")
+megan1 = Actor("megan.png")
+natasha1 = Actor("natasha.png")
 
 #Draw the game screen depending on the state
 def draw():
@@ -43,70 +47,114 @@ def draw():
         screen.draw.filled_rect(Rect(WIDTH / 2 - 55, HEIGHT / 2 - 95, 100, 80), "grey")
         screen.draw.filled_rect(Rect(WIDTH / 2 - 55, HEIGHT / 2 - 7, 100, 80), "grey")
         screen.draw.filled_rect(Rect(WIDTH / 2 - 55, HEIGHT / 2 + 82, 100, 80), "grey")
+        screen.draw.filled_rect(Rect(WIDTH / 2 - 290, HEIGHT / 2 - 90, 100, 80), "grey")
+        screen.draw.filled_rect(Rect(WIDTH / 2 - 290, HEIGHT / 2 - 5, 100, 80), "grey")
+        screen.draw.filled_rect(Rect(WIDTH / 2 + 190, HEIGHT / 2 - 100, 100, 80), "grey")
+        screen.draw.filled_rect(Rect(WIDTH / 2 + 190, HEIGHT / 2 - 10, 100, 80), "grey")
 
-        joe.pos = (160, 119)
-        joe.draw()
+        joe1.pos = (160, 119)
+        joe1.draw()
     
-        emilie.pos = (420, 200)
-        emilie.draw()
+        emilie1.pos = (420, 200)
+        emilie1.draw()
 
-        harrison.pos = (165, 210)
-        harrison.draw()
+        harrison1.pos = (165, 210)
+        harrison1.draw()
     
-        mark.pos = (165, 295)
-        mark.draw()
+        mark1.pos = (165, 295)
+        mark1.draw()
     
-        callum.pos = (420, 115)
-        callum.draw()
+        callum1.pos = (420, 115)
+        callum1.draw()
         
-        jack.pos = (420, 300)
-        jack.draw()
+        jack1.pos = (420, 300)
+        jack1.draw()
         
-        adam.pos = (290, 120)
-        adam.draw()
+        adam1.pos = (290, 120)
+        adam1.draw()
         
-        anita.pos = (290, 210)
-        anita.draw()
+        anita1.pos = (290, 210)
+        anita1.draw()
         
-        clara.pos = (290, 297)
-        clara.draw()
+        clara1.pos = (290, 297)
+        clara1.draw()
           
+        rachel1.pos = (50, 125)
+        rachel1.draw()
+        
+        emma1.pos = (50, 210)
+        emma1.draw()
+        
+        megan1.pos  = (542, 115)
+        megan1.draw()
+        
+        natasha1.pos = (535, 205)
+        natasha1.draw()
    
 #Register clicks on the start button
 def on_mouse_down(pos, button):
     global STATE
-    if button == mouse.LEFT and startbutton.collidepoint(pos):
+    if button == mouse.LEFT and startbutton.collidepoint(pos) and STATE==0:
         STATE=2
         print(STATE)
-    if button == mouse.LEFT and joe.collidepoint(pos):
-        MC=joe
+    if button == mouse.LEFT and joe1.collidepoint(pos):
+        MC=joe1
         STATE=1
         print(STATE)
         
-    if button == mouse.LEFT and emilie.collidepoint(pos):
-        MC=emilie
+    if button == mouse.LEFT and emilie1.collidepoint(pos):
+        MC=emilie1
         STATE=1
         print(STATE)
     
-    if button == mouse.LEFT and harrison.collidepoint(pos):
-        MC=harrison
+    if button == mouse.LEFT and harrison1.collidepoint(pos):
+        MC=harrison1
         STATE=1
         print(STATE)
         
-    if button == mouse.LEFT and mark.collidepoint(pos):
-        MC=mark
+    if button == mouse.LEFT and mark1.collidepoint(pos):
+        MC=mark1
         STATE=1
         print(STATE)
         
-    if button == mouse.LEFT and callum.collidepoint(pos):
-        MC=callum
+    if button == mouse.LEFT and callum1.collidepoint(pos):
+        MC=callum1
         STATE=1
         print(STATE)
         
-    if button == mouse.LEFT and adam.collidepoint(pos):
-        MC=adam
+    if button == mouse.LEFT and adam1.collidepoint(pos):
+        MC=adam1
         STATE=1
         print(STATE)
-
+        
+    if button == mouse.LEFT and anita1.collidepoint(pos):
+        MC=anita1
+        STATE=1
+        print(STATE)
+    
+    if button == mouse.LEFT and clara1.collidepoint(pos):
+        MC=clara1
+        STATE=1
+        print(STATE)
+        
+    if button == mouse.LEFT and rachel1.collidepoint(pos):
+        MC=rachel1
+        STATE=1
+        print(STATE)
+        
+    if button == mouse.LEFT and emma1.collidepoint(pos):
+        MC=emma1
+        STATE=1
+        print(STATE)
+        
+    if button == mouse.LEFT and megan1.collidepoint(pos):
+        MC=megan1
+        STATE=1
+        print(STATE)
+        
+    if button == mouse.LEFT and natasha1.collidepoint(pos):
+        MC=natasha1
+        STATE=1
+        print(STATE)
 #Run the game :)
 pgzrun.go()
